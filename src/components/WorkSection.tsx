@@ -6,30 +6,27 @@ const WorkSection = () => {
   const projects = [
     {
       name: "InkWorthy Creations",
-      description: "Redesigned a high-converting landing page for a startup content brand",
-      whatIDid: "Rebuilt their homepage with conversion-first design principles to boost lead generation",
-      outcome: "Visitors now understand their offer immediately, leading to 3x stronger engagement rates",
+      description: "Landing page redesign for a content-focused startup",
+      whatIDid: "Revamped the layout using conversion-first design to increase leads",
+      outcome: "Visitors now understand their offer clearly, leading to stronger engagement",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
-      liveUrl: "#",
-      altText: "InkWorthy Creations website homepage showing clean design and clear call-to-action"
+      liveUrl: "#"
     },
     {
       name: "Junood Creation", 
-      description: "Launched a clean, conversion-ready clothing brand site fast",
-      whatIDid: "Built their complete brand website in under a week using smart templates and AI tools",
-      outcome: "Mobile-optimized site that builds instant customer trust and drives sales",
+      description: "MVP site for a clothing brand founder",
+      whatIDid: "Helped the founder launch their brand's website in record time",
+      outcome: "Built customer trust with fast, mobile-ready design that reflects the brand",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-      liveUrl: "#",
-      altText: "Junood Creation clothing brand website with modern layout and product showcase"
+      liveUrl: "#"
     },
     {
       name: "AboutYouAI",
-      description: "Built an AI-powered bio generator tool in under a week",
-      whatIDid: "Designed and coded a smart, user-friendly AI tool for creators to auto-generate professional bios",
-      outcome: "Viral growth with users loving the no-hassle tool that actually works",
+      description: "AI-powered 'About Me' generator",
+      whatIDid: "Designed and built a smart, user-friendly tool for creators to auto-generate bios",
+      outcome: "Boosted engagement with a no-hassle tool users actually loved sharing",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
-      liveUrl: "#",
-      altText: "AboutYouAI tool interface showing AI-powered bio generation for content creators"
+      liveUrl: "#"
     }
   ];
 
@@ -44,10 +41,10 @@ const WorkSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Live Projects That Ship Fast
+              Recent Projects
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Real MVPs, tools, and sites I've helped founders launch — fast builds that convert visitors into customers
+              A few MVPs, tools, and sites I've helped launch — fast, clean, and ready to convert
             </p>
           </div>
 
@@ -60,7 +57,7 @@ const WorkSection = () => {
                   <div className="relative mb-6 overflow-hidden rounded-xl">
                     <img 
                       src={projects[0].image} 
-                      alt={projects[0].altText}
+                      alt={projects[0].name}
                       className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -75,14 +72,14 @@ const WorkSection = () => {
                     </p>
                     
                     <div className="mb-4">
-                      <h4 className="font-semibold text-slate-800 mb-2">The Build:</h4>
+                      <h4 className="font-semibold text-slate-800 mb-2">What I did:</h4>
                       <p className="text-slate-600">
                         {projects[0].whatIDid}
                       </p>
                     </div>
                     
                     <div className="mb-6">
-                      <h4 className="font-semibold text-slate-800 mb-2">The Results:</h4>
+                      <h4 className="font-semibold text-slate-800 mb-2">Outcome:</h4>
                       <p className="text-slate-600">
                         {projects[0].outcome}
                       </p>
@@ -94,7 +91,7 @@ const WorkSection = () => {
                       href={projects[0].liveUrl}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     >
-                      See It Live
+                      View Live
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
@@ -111,7 +108,7 @@ const WorkSection = () => {
                       <div className="relative mb-4 overflow-hidden rounded-lg">
                         <img 
                           src={project.image} 
-                          alt={project.altText}
+                          alt={project.name}
                           className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -126,14 +123,14 @@ const WorkSection = () => {
                         </p>
                         
                         <div className="mb-3">
-                          <h4 className="font-semibold text-slate-800 mb-1 text-sm">The Build:</h4>
+                          <h4 className="font-semibold text-slate-800 mb-1 text-sm">What I did:</h4>
                           <p className="text-slate-600 text-sm">
                             {project.whatIDid}
                           </p>
                         </div>
                         
                         <div className="mb-4">
-                          <h4 className="font-semibold text-slate-800 mb-1 text-sm">The Results:</h4>
+                          <h4 className="font-semibold text-slate-800 mb-1 text-sm">Outcome:</h4>
                           <p className="text-slate-600 text-sm">
                             {project.outcome}
                           </p>
@@ -145,7 +142,7 @@ const WorkSection = () => {
                           href={project.liveUrl}
                           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors group-hover:gap-3"
                         >
-                          See It Live
+                          View Live
                           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </a>
                       </div>
