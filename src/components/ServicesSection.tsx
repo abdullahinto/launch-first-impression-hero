@@ -7,25 +7,25 @@ const ServicesSection = () => {
     {
       icon: Rocket,
       title: "MVP Websites",
-      description: "Launch a working product fast — test, validate, and grow",
+      description: "Get your working product live fast — test with real users, validate your idea, start growing",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Zap,
-      title: "Landing Pages", 
-      description: "Conversion-first pages that attract, engage, and convert",
+      title: "High-Converting Landing Pages", 
+      description: "Conversion-focused pages that grab attention and turn visitors into customers",
       gradient: "from-cyan-500 to-blue-500"
     },
     {
       icon: Wand,
       title: "AI Tools & Automations",
-      description: "Smart tools to save time and impress your users", 
+      description: "Custom AI-powered tools that save time and wow your users", 
       gradient: "from-blue-400 to-cyan-400"
     },
     {
       icon: Globe,
       title: "Brand Websites",
-      description: "Beautifully built, fast-loading brand homes for your startup",
+      description: "Fast-loading, mobile-ready sites that make your startup look legit",
       gradient: "from-cyan-400 to-blue-400"
     }
   ];
@@ -33,29 +33,29 @@ const ServicesSection = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Vision Sync",
-      description: "We align on your idea and define a smart, buildable MVP",
+      title: "Quick Strategy Call",
+      description: "We sync on your vision and plan a smart, buildable MVP in 30 minutes",
       icon: Users,
       color: "from-blue-500 to-cyan-500"
     },
     {
       number: "02", 
-      title: "Build & Launch",
-      description: "I build everything using fast tools and smart systems",
+      title: "Fast Build & Launch",
+      description: "I build using AI-first tools and proven frameworks — no wasted time",
       icon: Settings,
       color: "from-cyan-500 to-blue-500"
     },
     {
       number: "03",
-      title: "Test & Polish", 
-      description: "We tweak based on real user feedback",
+      title: "Real-World Testing", 
+      description: "We test with actual users and tweak based on real feedback",
       icon: CheckCircle,
       color: "from-blue-400 to-cyan-400"
     },
     {
       number: "04",
-      title: "Ship & Grow",
-      description: "You launch, share, and start seeing traction",
+      title: "Ship & Scale",
+      description: "You launch confidently and start seeing real traction",
       icon: TrendingUp,
       color: "from-cyan-400 to-blue-400"
     }
@@ -72,10 +72,10 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              What I Can Build for You
+              What I Build for Founders
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Fast, focused solutions that help founders launch, validate, and grow their ideas without the complexity
+              Fast, focused solutions that help you launch, validate, and grow — without the complexity or endless delays
             </p>
           </div>
 
@@ -104,10 +104,10 @@ const ServicesSection = () => {
           {/* Process Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              How I Launch Your MVP — Fast
+              How We Launch Your MVP Fast
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              My proven 4-step system that gets founders from idea to launched product in weeks, not months
+              My no-code/AI-powered system gets you from idea to live product in weeks, not months
             </p>
           </div>
 
