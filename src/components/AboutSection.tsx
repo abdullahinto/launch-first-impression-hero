@@ -22,7 +22,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden" id="about">
       {/* Background Elements */}
       <div className="absolute top-10 right-20 w-32 h-32 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-2xl"></div>
       <div className="absolute bottom-32 left-10 w-40 h-40 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
@@ -77,7 +77,7 @@ const AboutSection = () => {
           </div>
 
           {/* Call to Action Section */}
-          <div className="text-center">
+          <div className="text-center" id="contact">
             <div className="backdrop-blur-md bg-white/60 border border-white/50 rounded-3xl p-12 hover:bg-white/70 transition-all duration-300">
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
                 Ready to Finally Launch?
@@ -88,14 +88,15 @@ const AboutSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/muhammad-abdullah-3b9a3a318/" 
+                  target='_blank'
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium text-lg"
                 >
                   <Calendar className="w-5 h-5" />
                   Let's Talk
                 </a>
                 <a 
-                  href="mailto:hello@muhammadabdullah.dev"
+                  href="mailto:printabdullah285@gmail.com"
                   className="inline-flex items-center gap-3 bg-white/80 border border-blue-200 text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium text-lg"
                 >
                   <Mail className="w-5 h-5" />

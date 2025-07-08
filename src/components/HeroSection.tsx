@@ -2,9 +2,11 @@
 import React from 'react';
 import { ArrowRight, Calendar, Rocket, Zap, Sparkles } from 'lucide-react';
 
+
+
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" id="home">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50"></div>
       

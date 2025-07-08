@@ -62,7 +62,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden" id="services">
       {/* Background Elements */}
       <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-xl"></div>

@@ -34,7 +34,7 @@ const Footer = () => {
               
               {/* LinkedIn Icon */}
               <a
-                href="https://linkedin.com/in/muhammadabdullah"
+                href="https://www.linkedin.com/in/muhammad-abdullah-3b9a3a318/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 hover:scale-110 group"
