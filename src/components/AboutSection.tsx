@@ -22,7 +22,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden" id="about">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-10 right-20 w-32 h-32 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-2xl"></div>
       <div className="absolute bottom-32 left-10 w-40 h-40 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
@@ -30,7 +30,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* About Me Section */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16"  id="about">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
               Who I Am
             </h2>
@@ -78,7 +78,7 @@ const AboutSection = () => {
 
           {/* Call to Action Section */}
           <div className="text-center" id="contact">
-            <div className="backdrop-blur-md bg-white/60 border border-white/50 rounded-3xl p-12 hover:bg-white/70 transition-all duration-300">
+            <div className="backdrop-blur-md bg-white/60 border border-white/50 rounded-3xl p-12 hover:bg-white/70 transition-all duration-300" >
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
                 Ready to Finally Launch?
               </h2>
