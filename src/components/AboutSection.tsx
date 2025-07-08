@@ -41,7 +41,7 @@ const AboutSection = () => {
                 <div className="relative w-64 h-64 mx-auto">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 backdrop-blur-md border border-white/50 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80" 
+                      src="/images/profile.webp" 
                       alt="Muhammad Abdullah"
                       className="w-full h-full object-cover opacity-80"
                     />
