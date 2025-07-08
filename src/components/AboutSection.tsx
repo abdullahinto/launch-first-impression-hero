@@ -39,14 +39,14 @@ const AboutSection = () => {
               {/* Portrait */}
               <div className="lg:w-1/3">
                 <div className="relative w-64 h-64 mx-auto">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 backdrop-blur-md border border-white/50 overflow-hidden">
+                  <div className="w-full h-full rounded-full   border overflow-hidden">
                     <img 
                       src="/images/profile.webp" 
                       alt="Muhammad Abdullah"
-                      className="w-full h-full object-cover opacity-80"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20"></div>
+                  {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20"></div> */}
                 </div>
               </div>
               
