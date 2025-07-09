@@ -9,7 +9,7 @@ const WorkSection = () => {
       description: "Landing page redesign for a content-focused startup",
       whatIDid: "Revamped the layout using conversion-first design to increase leads",
       outcome: "Visitors now understand their offer clearly, leading to stronger engagement",
-      image: "/images/inkworthy image.webp",
+      image: "/images/inkworthy.webp",
       liveUrl: "#"
     },
     {
@@ -17,7 +17,7 @@ const WorkSection = () => {
       description: "MVP site for a clothing brand founder",
       whatIDid: "Helped the founder launch their brand's website in record time",
       outcome: "Built customer trust with fast, mobile-ready design that reflects the brand",
-      image: "/images/junood image.webp",
+      image: "/images/junood.webp",
       liveUrl: "#"
     },
     {
@@ -25,7 +25,7 @@ const WorkSection = () => {
       description: "AI-powered 'About Me' generator",
       whatIDid: "Designed and built a smart, user-friendly tool for creators to auto-generate bios",
       outcome: "Boosted engagement with a no-hassle tool users actually loved sharing",
-      image: "/images/about image.webp",
+      image: "/images/about.webp",
       liveUrl: "#"
     }
   ];
