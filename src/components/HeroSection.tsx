@@ -1,14 +1,19 @@
+
 import React from "react";
 import { ArrowRight, Calendar, Rocket, Zap, Sparkles } from "lucide-react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const HeroSection = () => {
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation(0.2);
+  const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation(0.3);
+
   return (
     <section
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
       id="home"
     >
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
@@ -16,9 +21,14 @@ const HeroSection = () => {
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-r from-blue-300/30 to-cyan-300/30 rounded-full blur-lg animate-pulse delay-500"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div 
+          ref={heroRef}
+          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+            heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-md bg-white/30 border border-white/40 text-sm font-medium text-slate-700 mb-8 hover:bg-white/40 transition-all duration-300 group">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-md bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/20 text-sm font-medium text-slate-700 dark:text-slate-300 mb-8 hover:bg-white/40 dark:hover:bg-white/20 transition-all duration-300 group">
             <Sparkles className="w-4 h-4 text-blue-500 group-hover:rotate-12 transition-transform duration-300" />
             Helping founders launch faster
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -26,14 +36,14 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="block text-slate-900 mb-2">Still waiting to</span>
+            <span className="block text-slate-900 dark:text-white mb-2">Still waiting to</span>
             <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
               launch that idea?
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
             I help busy founders and solo builders launch their{" "}
             <strong>MVPs, AI tools, or landing pages</strong> — fast, clean, and
             conversion-optimized. No team required. Just smart tools and proven
@@ -42,10 +52,10 @@ const HeroSection = () => {
 
           {/* Name & Title */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-slate-800 mb-2">
+            <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-2">
               Muhammad Abdullah
             </h2>
-            <p className="text-lg text-slate-600 flex items-center justify-center gap-2">
+            <p className="text-lg text-slate-600 dark:text-slate-400 flex items-center justify-center gap-2">
               <Zap className="w-5 h-5 text-yellow-500" />
               DM for MVPs, AI tools & conversion-first design
             </p>
@@ -64,7 +74,7 @@ const HeroSection = () => {
 
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 px-8 py-4 backdrop-blur-md bg-white/30 border border-white/40 text-slate-700 font-semibold rounded-xl hover:bg-white/50 transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-2 px-8 py-4 backdrop-blur-md bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/20 text-slate-700 dark:text-slate-300 font-semibold rounded-xl hover:bg-white/50 dark:hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               <Rocket className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
               View Work
@@ -72,35 +82,40 @@ const HeroSection = () => {
           </div>
 
           {/* Glass Panel with Stats/Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group">
+          <div 
+            ref={featuresRef}
+            className={`grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-300 ${
+              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <div className="backdrop-blur-md bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-xl p-6 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 group">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-800 mb-2">Fast Launch</h3>
-              <p className="text-slate-600 text-sm">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">Fast Launch</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 Get your MVP live in weeks, not months
               </p>
             </div>
 
-            <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group">
+            <div className="backdrop-blur-md bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-xl p-6 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-800 mb-2">AI-Powered</h3>
-              <p className="text-slate-600 text-sm">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">AI-Powered</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 Smart tools and automation built-in
               </p>
             </div>
 
-            <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group">
+            <div className="backdrop-blur-md bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-xl p-6 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 group">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-slate-800 mb-2">
+              <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2">
                 Conversion-First
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 Designed to turn visitors into customers
               </p>
             </div>
